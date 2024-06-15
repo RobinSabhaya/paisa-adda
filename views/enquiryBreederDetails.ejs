@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= enquiry_type %>
+    </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-bg {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .bannerimg {
+            display: none;
+        }
+
+        .padding-data {
+            padding-left: 10px;
+        }
+
+        .section-wrapper {
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 10px;
+            padding-top: 8px;
+            margin: 0 auto;
+        }
+
+        .Welcome-section {
+            padding-left: 15px;
+            padding-top: 15px;
+            display: block;
+        }
+
+        .welcome-heading {
+            font-size: 14px;
+            margin: 0;
+            color: #003443;
+            line-height: 22px;
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+
+        .feature-heading {
+            font-size: 12px;
+            line-height: 18px;
+            padding-left: 19px;
+            margin: 0;
+            color: #003443;
+        }
+
+        .footer-desc {
+            text-align: center;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        .care-desc {
+            padding-bottom: 15px;
+        }
+
+        .feature-image {
+            padding-right: 15px;
+        }
+
+        .feature-desc {
+            padding-bottom: 16px;
+        }
+
+        .table-heading {
+            font-size: 12px;
+            line-height: 22px;
+            font-weight: 400;
+            color: #003443;
+            padding-right: 16px;
+        }
+
+        .table-data {
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #003443 !important;
+        }
+
+        .breeder-img {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            min-height: 64px;
+            margin-right: 14px;
+            margin-bottom: 8px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .detail-heading {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 700;
+            color: #003443;
+            padding-bottom: 20px;
+            margin: 0 auto;
+        }
+
+        .breeder-name {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+            color: #003443;
+            margin: 0;
+        }
+
+        .breeder-detail {
+            max-width: 250px;
+            width: 100%;
+            border-radius: 8px;
+            background-color: white;
+            padding: 16px 0px 16px 19px;
+        }
+
+        .soical-icon {
+            padding-bottom: 20px;
+        }
+
+        .view-puupy {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 22px;
+            color: #ff4e00 !important;
+            margin: 0;
+            text-decoration: underline;
+            padding-top: 7px;
+        }
+
+        .banner-img {
+            width: 63px;
+            height: 63px;
+            border-radius: 4px;
+            overflow: hidden;
+            padding: 15px 12px 15px;
+        }
+
+        .puppy-name {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 22px;
+            color: #003443;
+            padding-top: 12px;
+        }
+
+        @media (min-width: 376px) {
+            .feature-heading {
+                margin: 0 auto;
+            }
+
+            .section-wrapper {
+                padding-left: 14px;
+                padding-right: 14px;
+                padding-bottom: 10px;
+                padding-top: 14px;
+                max-width: 300px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .Welcome-section {
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: block;
+            }
+
+            .welcome-heading {
+                font-size: 16px;
+                margin: 0;
+                color: #003443;
+                line-height: 22px;
+                font-weight: 700;
+                padding-bottom: 0px;
+            }
+
+            .description-section {
+                padding-top: 30px;
+            }
+
+            .breeder-detail {
+                max-width: 250px;
+                width: 100%;
+            }
+
+            .feature-image {
+                padding-right: 16px;
+            }
+
+            .emoji-section {
+                height: 30px;
+                width: 30px;
+            }
+
+            .footer-desc {
+                text-align: center;
+                max-width: 300px;
+            }
+
+            .view-puupy {
+                font-size: 12px;
+                padding-top: 7px;
+            }
+
+            .puppy-name {
+                font-size: 13px;
+
+                padding-top: 15px;
+            }
+        }
+
+        @media (min-width: 543px) {
+            .main-bg {
+                padding-top: 53px;
+                padding-bottom: 45px;
+                width: 100%;
+                max-width: 735px;
+                margin: 0 auto;
+            }
+
+            .bannerimg {
+                display: block;
+            }
+
+            .section-wrapper {
+                padding-left: 28px;
+                padding-right: 28px;
+                padding-top: 25px;
+                padding-bottom: 32px;
+                max-width: 543px;
+                width: 100%;
+            }
+
+            .welcome-heading {
+                font-size: 17px;
+                padding-bottom: 15px;
+            }
+
+            .Welcome-section {
+                padding-left: 38px;
+                padding-top: 35px;
+                padding-bottom: 18px;
+            }
+
+            .description-section {
+                margin-top: 49px;
+            }
+
+            .feature-desc {
+                padding-bottom: 24px;
+            }
+
+            .feature-image {
+                padding-right: 24px;
+            }
+
+            .emoji-section {
+                height: 35px;
+                width: 34px;
+            }
+
+            .feature-heading {
+                font-size: 13px;
+                line-height: 18px;
+                text-align: left;
+                padding-left: 38px;
+            }
+
+            .table-data {
+                font-size: 14px;
+            }
+
+            .table-heading {
+                padding-right: 24px;
+            }
+
+            .breeder-name {
+                font-size: 20px;
+            }
+
+            .breeder-detail {
+                max-width: 450px;
+                width: 100%;
+                padding: 24px 0px 24px 38px;
+            }
+
+            .padding-data {
+                padding-left: 5px;
+            }
+
+            .care-desc {
+                padding-bottom: 30px;
+            }
+
+            .footer-desc {
+                max-width: 350px;
+            }
+
+            .soical-icon {
+                padding-bottom: 33px;
+            }
+
+            .view-puupy {
+                font-size: 14px;
+                padding-top: 10px;
+            }
+
+            .puppy-name {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+    <div style="background-color: #f1f1f1" class="main-bg">
+        <div style="background-color: white" class="section-wrapper">
+            <!-- banner section -->
+            <table style="background-color: rgba(255, 232, 223, 0.4); padding-right: 10px" class="Welcome-section">
+                <tr>
+                    <td style="width: 100%">
+                        <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/logo.png"
+                            alt="logo" style="width: auto; height: 18px; padding-bottom: 16px" />
+                        <p style="
+                                    margin: 0;
+                                    font-size: 12px;
+                                    line-height: 22px;
+                                    color: #003443;
+                                    padding-bottom: 4px;
+                                ">
+                            We have sent your recent enquiry to <%= breeder_f_name %>!
+                        </p>
+                        <p class="welcome-heading">
+                            <% if(puppyInfo){ %> Your puppy enquiry details are given below <% }else{ %> Your enquiry
+                                    has been sent <% } %>
+                        </p>
+                    </td>
+                </tr>
+                <% if(puppyInfo){ %>
+                    <tr>
+                        <td>
+                            <div style="
+                                    display: flex;
+                                    background: white;
+                                    border-radius: 8px;
+                                    overflow: hidden;
+                                ">
+                                <div class="banner-img">
+                                    <img src="<%= puppyInfo.puppy_image %>" alt="puppy"
+                                        style="width: 100%; height: 100%; object-fit: cover" />
+                                </div>
+
+                                <div>
+                                    <p class="puppy-name" style="margin: 0">
+                                        <%= puppyInfo.puppy_name %>
+                                    </p>
+                                    <p style="
+                                            font-size: 12px;
+                                            font-weight: 400;
+                                            line-height: 18px;
+                                            color: #003443;
+                                            margin: 0;
+                                        ">
+                                        <%= puppyInfo.age_string %>
+                                    </p>
+                                    <a href="<%= puppyInfo.puppy_link %>" class="view-puupy">View puppy</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+            <!-- breeder detail section -->
+            <div class="breeder-detail">
+                <p class="detail-heading">Breeder Information</p>
+                <div style="display: flex; padding-bottom: 8px">
+                    <% if(breeder_image) { %>
+                        <div class="breeder-img">
+                            <img src="<%= breeder_image %>" alt="breeder"
+                                style="width: 100%; height: 100%; object-fit: cover" />
+                        </div>
+                        <% } else { %>
+                            <div style="
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 50%;
+                                display: flex;
+                                color: #ffffff;
+                                font-size: 35px;
+                                font-weight: bold;
+                                background-color: #ff4e00;
+                                margin-right: 10px;
+                            ">
+                                <span style="margin: auto">
+                                    <%= first_latter %>
+                                </span>
+                            </div>
+                            <% } %>
+                                <div>
+                                    <p class="breeder-name">
+                                        <%= breeder_f_name %>
+                                            <%= breeder_l_name %>
+                                    </p>
+                                    <p style="
+                                    font-size: 13px;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    color: #003443;
+                                    margin: 0;
+                                ">
+                                        <%= kennel_name %>
+                                    </p>
+                                    <p style="
+                                    font-size: 13px;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    color: #adabac;
+                                    margin: 0;
+                                ">
+                                        <%= kennel_city %>, <%= kennel_state %>
+                                    </p>
+                                </div>
+                </div>
+                <div style="display: flex; padding-bottom: 8px">
+                    <p style="margin: 0" class="table-heading">Email ID:</p>
+
+                    <p class="table-data padding-data" style="margin: 0; text-decoration: underline">
+                        <%= breeder_email %>
+                    </p>
+                </div>
+                <% if(breeder_mobile_no) { %>
+                    <div style="display: flex">
+                        <p style="margin: 0" class="table-heading">Contact:</p>
+
+                        <p class="table-data padding-data" style="margin: 0">
+                            +91 <%= breeder_mobile_no %>
+                        </p>
+                    </div>
+                    <% } %>
+            </div>
+            <p class="feature-heading">
+                You can reach out to the breeder using the contact info given above
+            </p>
+        </div>
+        <!-- footer -->
+        <div class="footer-desc">
+            <p style="
+                        margin: 0;
+                        padding-top: 22px;
+                        padding-bottom: 12px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #003443;
+                    ">
+                With
+                <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/heart.png"
+                    alt="heart" />
+                from
+                <span style="color: #ff4e00">HappyPet</span>
+            </p>
+            <p style="
+                        max-width: 245px;
+                        margin: 0 auto;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #003443;
+                    " class="care-desc">
+                If you have any questions, please email us at
+                <span style="font-weight: 700">hello@happypet.care</span>
+            </p>
+            <p style="
+                        font-size: 12px;
+                        line-height: 18px;
+                        margin: 0;
+                        padding-bottom: 9px;
+                        color: #003443;
+                    ">
+                Follow us on social media
+            </p>
+            <div class="social-icon">
+                <a href="<%= social_links.facebook %>" style="
+                      text-decoration: none;">
+                    <img src="<%= social_icons.facebook %>" alt="Facebook"
+                        style="margin-right: 19px; height: 24px; width: 24px; text-decoration: none;" />
+                </a>
+                <a href="<%= social_links.instagram %>" style="
+                      text-decoration: none;">
+                    <img src="<%= social_icons.instagram %>" alt="Instagram"
+                        style="margin-right: 19px; height: 24px; width: 24px;text-decoration: none;" />
+                </a>
+            </div>
+        </div>
+        <p style="font-size: 11px; line-height: 16px; color: #676767; text-align: center">
+            Excitado Innovations Pvt Ltd, New 3169/F, HAL 2nd Stage, Indiranagar, Bengaluru
+            560038
+        </p>
+    </div>
+</body>
+
+</html>

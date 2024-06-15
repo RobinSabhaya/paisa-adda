@@ -1,0 +1,19 @@
+# Dependencies
+node_modules
+
+# Environment varibales
+.env
+
+# public
+public/*
+!public/default/
+
+*.lock
+.DS_Store
+
+# Log folder
+logs
+package-lock.json
+
+# 
+bin

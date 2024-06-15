@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= enquiry_type %>
+  </title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .main-bg {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .bannerimg {
+      display: none;
+    }
+
+    .section-wrapper {
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-bottom: 10px;
+      padding-top: 8px;
+      margin: 0 auto;
+    }
+
+    .Welcome-section {
+      padding-left: 15px;
+      padding-top: 15px;
+      display: block;
+    }
+
+    .welcome-heading {
+      font-size: 15px;
+      margin: 0;
+      color: #003443;
+      line-height: 18px;
+      font-weight: 700;
+      padding-bottom: 10px;
+    }
+
+    .feature-heading {
+      font-size: 12px;
+      line-height: 18px;
+      padding-left: 15px;
+      color: #003443;
+    }
+
+    .footer-desc {
+      text-align: center;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    .care-desc {
+      padding-bottom: 15px;
+    }
+
+    .feature-image {
+      padding-right: 15px;
+    }
+
+    .detail-heading {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 700;
+      color: #003443;
+      padding-bottom: 15px;
+      margin: 0;
+    }
+
+    .feature-desc {
+      padding-bottom: 16px;
+    }
+
+    .table-heading {
+      font-size: 12px;
+      line-height: 22px;
+      font-weight: 400;
+      color: #003443;
+      padding-right: 16px;
+      text-align: center;
+    }
+
+    .table-data {
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 700;
+      color: #003443;
+    }
+
+    .breeder-detail {
+      max-width: 260px;
+      width: 100%;
+
+      background-color: white;
+      padding: 16px 0px 0px 15px;
+    }
+
+    .soical-icon {
+      padding-bottom: 20px;
+    }
+
+    .banner-img {
+      width: 63px;
+      height: 63px;
+      border-radius: 4px;
+      overflow: hidden;
+      padding: 10px 12px 10px;
+    }
+
+    .puppy-name {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 22px;
+      color: #003443;
+      padding-top: 20px;
+    }
+
+    @media (min-width: 376px) {
+      .feature-heading {
+        margin: 0 auto;
+        padding-top: 10px;
+      }
+
+      .section-wrapper {
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 10px;
+        padding-top: 14px;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .Welcome-section {
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+      }
+
+      .welcome-heading {
+        font-size: 16px;
+        margin: 0;
+        color: #003443;
+        line-height: 18px;
+        font-weight: 700;
+        padding-bottom: 15px;
+      }
+
+      .description-section {
+        padding-top: 30px;
+      }
+
+      .breeder-detail {
+        max-width: 439px;
+        width: 100%;
+      }
+
+      .feature-image {
+        padding-right: 16px;
+      }
+
+      .emoji-section {
+        height: 30px;
+        width: 30px;
+      }
+
+      .footer-desc {
+        text-align: center;
+        max-width: 300px;
+      }
+
+      .puppy-name {
+        font-size: 13px;
+
+        padding-top: 24px;
+      }
+    }
+
+    @media (min-width: 543px) {
+      .main-bg {
+        padding-top: 53px;
+        padding-bottom: 55px;
+        width: 100%;
+        max-width: 735px;
+        margin: 0 auto;
+      }
+
+      .bannerimg {
+        display: block;
+      }
+
+      .section-wrapper {
+        padding-left: 28px;
+        padding-right: 28px;
+        padding-top: 25px;
+        padding-bottom: 32px;
+        max-width: 543px;
+        width: 100%;
+      }
+
+      .Welcome-section {
+        padding-left: 38px;
+        padding-top: 35px;
+        padding-bottom: 18px;
+      }
+
+      .description-section {
+        margin-top: 49px;
+      }
+
+      .feature-desc {
+        padding-bottom: 24px;
+      }
+
+      .feature-image {
+        padding-right: 24px;
+      }
+
+      .emoji-section {
+        height: 35px;
+        width: 34px;
+      }
+
+      .feature-heading {
+        font-size: 14px;
+        line-height: 18px;
+        padding-left: 38px;
+        padding-top: 0;
+      }
+
+      .table-data {
+        font-size: 14px;
+      }
+
+      .table-heading {
+        padding-right: 24px;
+      }
+
+      .breeder-detail {
+        max-width: 439px;
+        width: 100%;
+        padding: 24px 30px 24px 38px;
+      }
+
+      .care-desc {
+        padding-bottom: 30px;
+      }
+
+      .footer-desc {
+        max-width: 350px;
+      }
+
+      .soical-icon {
+        padding-bottom: 33px;
+      }
+
+      .banner-img {
+        padding: 15px 12px 15px;
+      }
+
+      .puppy-name {
+        font-size: 14px;
+      }
+
+      .welcome-heading {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <div style="background-color: #f1f1f1" class="main-bg">
+    <div style="background-color: white" class="section-wrapper">
+      <table style="
+            background-color: rgba(255, 232, 223, 0.4);
+            padding-right: 10px;
+          " class="Welcome-section">
+        <tr>
+          <td style="width: 100%">
+            <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/logo.png" alt="logo"
+              style="width: auto; height: 18px; padding-bottom: 24px" />
+            <p style="
+                  margin: 0;
+                  font-size: 12px;
+                  line-height: 24px;
+                  color: #003443;
+                  padding-bottom: 4px;
+                ">
+              Congratulations <%= first_name %>!
+            </p>
+            <p class="welcome-heading">You received an enquiry <%= puppyInfo?'for your puppy':'' %> 🎉</p>
+          </td>
+        </tr>
+        <% if(puppyInfo){ %>
+          <tr>
+            <td>
+              <div style="
+                  display: flex;
+                  background: white;
+                  border-radius: 8px;
+                  overflow: hidden;
+                ">
+                <div class="banner-img">
+                  <img src="<%= puppyInfo.puppy_image %>" alt="puppy"
+                    style="width: 100%; height: 100%; object-fit: cover" />
+                </div>
+
+                <div>
+                  <p class="puppy-name" style="margin: 0">
+                    <%= puppyInfo.puppy_name %>
+                  </p>
+                  <p style="
+                      font-size: 12px;
+                      font-weight: 400;
+                      line-height: 18px;
+                      color: #003443;
+                      margin: 0;
+                    ">
+                    <%= puppyInfo.age_string %>
+                  </p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <% } %>
+      </table>
+      <div class="breeder-detail">
+        <p class="detail-heading">Customer Information</p>
+        <div style="display: flex; padding-bottom: 8px">
+          <p style="margin: 0" class="table-heading">Email ID:</p>
+
+          <p class="table-data" style="margin: 0">
+            <%= enquiry_from_email %>
+          </p>
+        </div>
+        <div style="display: flex; padding-bottom: 8px">
+          <p style="margin: 0" class="table-heading">Contact:</p>
+
+          <p class="table-data" style="margin: 0">
+            +91 <%= enquiry_from_phone %>
+          </p>
+        </div>
+        <div style="display: flex">
+          <p style="margin: 0" class="table-heading">Message:</p>
+          <div style="max-width: 305px">
+            <p class="table-data" style="margin: 0">
+              <%= enquiry_message %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="feature-heading">
+        Your customer is waiting to hear from you. Contact them today.
+      </p>
+    </div>
+
+    <div class="footer-desc">
+      <p style="
+            margin: 0;
+            padding-top: 22px;
+            padding-bottom: 12px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #003443;
+          ">
+        With
+        <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/heart.png" alt="heart" />
+        from
+        <span style="color: #ff4e00">HappyPet</span>
+      </p>
+      <p style="
+            max-width: 245px;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 18px;
+            color: #003443;
+          " class="care-desc">
+        If you have any questions, please email us at
+        <span style="font-weight: 700">hello@happypet.care</span>
+      </p>
+      <p style="
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0;
+            padding-bottom: 9px;
+            color: #003443;
+          ">
+        Follow us on social media
+      </p>
+      <div class="social-icon">
+        <a href="<%= social_links.facebook %>">
+          <img src="<%= social_icons.facebook %>" alt="Facebook"
+            style="margin-right: 11px; height: 36px; width: 36px" /></a>
+        <a href="<%= social_links.instagram %>">
+          <img src="<%= social_icons.instagram %>" alt="Instagram"
+            style="margin-right: 11px; height: 36px; width: 36px" /></a>
+        <!-- <img src="<%= social_icons.twitter %>" alt="Twitter"
+              style="margin-right: 11px; height: 36px; width: 36px" />
+          <img src="<%= social_icons.telegram %>" alt="Telegram"
+              style="margin-right: 11px; height: 36px; width: 36px" />
+          <img src="<%= social_icons.whatsapp %>" alt="Whatsapp" style="height: 36px; width: 36px" /> -->
+      </div>
+    </div>
+    <p style="
+          font-size: 11px;
+          line-height: 16px;
+          color: #676767;
+          text-align: center;
+        ">
+      Excitado Innovations Pvt Ltd, New 3169/F, HAL 2nd Stage, Indiranagar,
+      Bengaluru 560038
+    </p>
+  </div>
+</body>
+
+</html>

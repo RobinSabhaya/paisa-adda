@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer review receive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-bg {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .bannerimg {
+            display: none;
+        }
+
+        .section-wrapper {
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 12px;
+            padding-top: 12px;
+            margin: 0 auto;
+        }
+
+        .Welcome-section {
+            padding-left: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: block;
+        }
+
+        .welcome-heading {
+            font-size: 15px;
+            margin: 0;
+            color: #003443;
+            line-height: 18px;
+            font-weight: 700;
+            padding-bottom: 8px;
+        }
+
+        .Welcome_desc {
+            margin-right: 0px;
+        }
+
+        .description-section {
+            padding-top: 30px;
+        }
+
+        .feature-section-moblie {
+            display: inline-table;
+        }
+
+        .feature-section {
+            display: none;
+        }
+
+        .review-section {
+            max-width: 314px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            text-align: center;
+        }
+
+        .reviewer-name {
+            margin: 0px;
+            color: #003443;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 600;
+            padding-top: 10px;
+            padding-bottom: 12px;
+        }
+
+        .button {
+            background-color: #ff4e00;
+            color: #ffffff !important;
+            font-size: 11px;
+            outline: none;
+            line-height: 13px;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            border: 0;
+        }
+
+        .benefit-section {
+            max-width: 442px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .benefit-heaading {
+            max-width: 258px;
+            color: #003443;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 700;
+            margin: 0 auto;
+            padding-bottom: 17px;
+        }
+
+        .review-desc {
+            color: #003443;
+            font-size: 12px;
+            line-height: 18px;
+            max-width: 120px;
+        }
+
+        .more-review-btn {
+            margin-top: 20px;
+            border: 1px solid #ff4e00;
+            border-radius: 8px;
+            color: #ff4e00 !important;
+            padding: 10px 25px;
+            background-color: #ffffff;
+            font-weight: 700;
+            font-size: 11px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer-desc {
+            text-align: center;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        .care-desc {
+            padding-bottom: 15px;
+        }
+
+        .feature-desc {
+            padding-bottom: 16px;
+        }
+
+        .view-button {
+            margin-bottom: 20px;
+        }
+
+        .soical-icon {
+            padding-bottom: 20px;
+        }
+
+        @media (min-width: 376px) {
+            .feature-heading {
+                margin: 0 auto;
+                font-size: 14px;
+                line-height: 18px;
+                color: #003443;
+                font-weight: 700;
+                padding-bottom: 17px;
+            }
+
+            .Welcome_desc {
+                margin-right: 0px;
+            }
+
+            .section-wrapper {
+                padding-left: 14px;
+                padding-right: 14px;
+                padding-bottom: 14px;
+                padding-top: 14px;
+                max-width: 300px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .Welcome-section {
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                display: block;
+            }
+
+            .welcome-heading {
+                font-size: 17px;
+                margin: 0;
+                color: #003443;
+                line-height: 18px;
+                font-weight: 700;
+                padding-bottom: 8px;
+            }
+
+            .description-section {
+                padding-top: 30px;
+            }
+
+            .footer-desc {
+                text-align: center;
+                max-width: 300px;
+            }
+        }
+
+        @media (min-width: 543px) {
+            .main-bg {
+                padding-top: 53px;
+                padding-bottom: 42px;
+                width: 100%;
+                max-width: 735px;
+                margin: 0 auto;
+            }
+
+            .bannerimg {
+                display: block;
+                width: 140px;
+                height: 140px;
+                margin-right: 38px;
+            }
+
+            .welcome-heading {
+                font-size: 18px;
+            }
+
+            .more-review-btn {
+                margin-top: 32px;
+                font-size: 12px;
+            }
+
+            .section-wrapper {
+                padding-left: 28px;
+                padding-right: 28px;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                max-width: 543px;
+                width: 100%;
+            }
+
+            .review-section {
+                padding-top: 56px;
+                padding-bottom: 54px;
+            }
+
+            .button {
+                font-size: 12px;
+
+                line-height: 13px;
+                padding: 10px 25px;
+            }
+
+            .benefit-heaading {
+                max-width: 244px;
+                font-size: 18px;
+                padding-bottom: 32px;
+            }
+
+            .Welcome-section {
+                padding-left: 38px;
+                padding-top: 35px;
+                padding-bottom: 35px;
+            }
+
+            .description-section {
+                padding-top: 49px;
+            }
+
+            .feature-section-moblie {
+                display: none;
+            }
+
+            .feature-section {
+                display: inline-table;
+            }
+
+            .care-desc {
+                padding-bottom: 30px;
+            }
+
+            .footer-desc {
+                max-width: 560px;
+            }
+
+            .soical-icon {
+                padding-bottom: 33px;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+    <div style="background-color: #f1f1f1" class="main-bg">
+        <div style="background-color: white" class="section-wrapper">
+            <table style="
+            background-color: rgba(255, 232, 223, 0.4);
+            padding-right: 10px;border-collapse: collapse;
+          " class="Welcome-section">
+                <tr>
+                    <td style="width: 100%">
+                        <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/logo.png"
+                            alt="logo" style="width: auto; height: 18px; padding-bottom: 17px" />
+                        <p style="
+                  margin: 0;
+                  font-size: 12px;
+                  line-height: 24px;
+                  color: #003443;
+                  padding-bottom: 11px;
+                ">
+                            Hello <%= first_name %>,
+                        </p>
+                        <p class="welcome-heading">
+                            You <%= reviewReceivedCount?'have':'' %> received <%= reviewReceivedCount?'your first':'a'
+                                    %> review!
+                        </p>
+                        <p style="
+                  margin: 0;
+                  color: #003443;
+                  font-size: 12px;
+                  line-height: 18px;
+                  font-weight: 400;
+                  max-width: 290px;
+                ">
+                            <%= customer_name %> has accepted your review invite, and given you
+                                your first review. More reviews will help users gain trust in
+                                you and your dogs!
+                        </p>
+                    </td>
+                    <td style="vertical-align: bottom; text-align: left">
+                        <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/reviewReceiveBanner.png"
+                            class="bannerimg" alt="Welcome" />
+                    </td>
+                </tr>
+            </table>
+            <div class="review-section">
+                <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/quotes.png"
+                    alt="quotes" style="
+              width: 32px;
+              height: 41px;
+              object-fit: contain;
+              margin: 0 auto;
+            " />
+                <p class="reviewer-name">
+                    <%= customer_name %>
+                </p>
+                <div style="position: relative">
+                    <p style="
+                max-height: 48px;
+                margin: 0;
+                color: #5e585a;
+                font-size: 14px;
+                line-height: 22px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                margin-bottom: 20px;
+              ">
+                        We had a fantastic experience with <%= first_name %>. They provided us with
+                            a healthy and hds beautiful Beagle puppy. Their dedication to
+                            breed standards and responsible breeding is evident.
+                    </p>
+                </div>
+                <a href="<%= profile_link %>" class="button">View All Reviews</a>
+            </div>
+            <div class="benefit-section">
+                <p class="benefit-heaading">
+                    Here are a few benefits of getting more reviews
+                </p>
+                <table style="width: 100%" class="feature-section">
+                    <tr style="width: 120px">
+                        <td>
+                            <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/Star.png"
+                                alt="star" style="width: 26px; height: 26px" />
+                        </td>
+                        <td>
+                            <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/ThumbsUp.png"
+                                alt="ThumbsUp" style="width: 26px; height: 26px" />
+                        </td>
+                        <td>
+                            <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/Medal.png"
+                                alt="Medal" style="width: 26px; height: 26px" />
+                        </td>
+                    </tr>
+                    <tr style="width: 120px">
+                        <td class="review-desc">Increases trust with customers</td>
+                        <td class="review-desc">
+                            Increases the chance of getting an enquiry
+                        </td>
+                        <td class="review-desc">Makes you stand out from the crowd</td>
+                    </tr>
+                </table>
+                <table class="feature-section-moblie" style="margin: 0 auto; width: 140px">
+                    <tr>
+                        <td>
+                            <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/Star.png"
+                                alt="star" style="width: 26px; height: 26px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="review-desc" style="padding-bottom: 17px">
+                            Increases trust with customers
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/ThumbsUp.png"
+                                alt="ThumbsUp" style="width: 26px; height: 26px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="review-desc" style="padding-bottom: 17px">
+                            Increases the chance of getting an enquiry
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/Medal.png"
+                                alt="Medal" style="width: 26px; height: 26px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="review-desc">Makes you stand out from the crowd</td>
+                    </tr>
+                </table>
+                <a href="<%= get_more_reviews_today %>" class="more-review-btn">Get More Reviews Today</a>
+            </div>
+        </div>
+
+        <div class="footer-desc">
+            <p style="
+            margin: 0;
+            padding-top: 22px;
+            padding-bottom: 12px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #003443;
+          ">
+                With
+                <img src="https://happypetproduction.s3.ap-south-1.amazonaws.com/emailTemplateImages/heart.png"
+                    alt="heart" />
+                from
+                <span style="color: #ff4e00">HappyPet</span>
+            </p>
+            <p style="
+            max-width: 245px;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 18px;
+            color: #003443;
+          " class="care-desc">
+                If you have any questions, please email us at
+                <span style="font-weight: 700">hello@happypet.care</span>
+            </p>
+            <p style="
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0;
+            padding-bottom: 9px;
+            color: #003443;
+          ">
+                Follow us on social media
+            </p>
+            <div class="social-icon">
+                <a href="<%= social_links.facebook %>">
+                    <img src="<%= social_icons.facebook %>" alt="Facebook"
+                        style="margin-right: 11px; height: 36px; width: 36px" /></a>
+                <a href="<%= social_links.instagram %>">
+                    <img src="<%= social_icons.instagram %>" alt="Instagram"
+                        style="margin-right: 11px; height: 36px; width: 36px" />
+                </a>
+            </div>
+            <p style="font-size: 11px; line-height: 16px; color: #676767">
+                Excitado Innovations Pvt Ltd, New 3169/F, HAL 2nd Stage, Indiranagar,
+                Bengaluru 560038
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
