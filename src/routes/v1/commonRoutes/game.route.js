@@ -8,7 +8,12 @@ const { ROLES } = require('../../../helper/constant.helper');
 const router = express.Router();
 
 /** Create update game */
-router.post('/create-update', authorizeV3(ROLES.super_admin), validate(gameValidation.createUpdateGame), createUpdateGame);
+router.post(
+  '/create-update',
+  authorizeV3(ROLES.super_admin, ROLES.user),
+  validate(gameValidation.createUpdateGame),
+  createUpdateGame
+);
 /** Get game */
 router.get('/list', authorizeV3(ROLES.super_admin, ROLES.user), validate(gameValidation.getGameList), getGameList);
 
