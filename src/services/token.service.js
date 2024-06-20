@@ -62,7 +62,7 @@ const saveToken = async (token, userId, expires, type, role, user_from = USER_FR
 
   if (role === ROLES.user || role === ROLES.breeder || role === ROLES.pet_parent) {
     userObj.user = userId;
-    await Token.findOneAndUpdate({ user: userId, user_from }, { ...userObj, user_from }, { upsert: true, new: true });
+    await Token.findOneAndUpdate({ user: userId }, { ...userObj, user_from }, { upsert: true, new: true });
   } else if (role === ROLES.super_admin || role === ROLES.sub_admin) {
     userObj.admin = userId;
     await AdminToken.findOneAndUpdate({ admin: userId }, userObj, { upsert: true, new: true });

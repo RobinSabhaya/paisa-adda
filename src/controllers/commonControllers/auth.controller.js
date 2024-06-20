@@ -320,14 +320,13 @@ const login = catchAsync(async (req, res) => {
     );
   }
 
-  const tokens = await tokenService.generateAuthTokens(userData, req.body?.user_from); // Generate auth token.
+  const tokens = await tokenService.generateAuthTokens(userData, 'App'); // Generate auth token.
   responseData.tokens = tokens;
-
-  if (req.body.device_token) {
-    await userService.updateUserById(userDtl._id, {
-      device_token: req.body.device_token,
-    });
-  }
+  // if (req.body.device_token) {
+  //   await userService.updateUserById(userDtl._id, {
+  //     device_token: req.body.device_token,
+  //   });
+  // }
 
   // if (req.body?.device_info) {
   //   /** Match the element which is device_id */
