@@ -20,7 +20,7 @@ const gameSchema = mongoose.Schema(
     },
   },
   {
-    timeStamps: true,
+    timestamps: true,
     versionKey: false,
   }
 );

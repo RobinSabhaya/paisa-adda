@@ -21,7 +21,7 @@ const gameScoreSchema = mongoose.Schema(
     },
   },
   {
-    timeStamps: true,
+    timestamps: true,
     versionKey: false,
   }
 );
