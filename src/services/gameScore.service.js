@@ -40,6 +40,11 @@ const getGameScoreList = async (options) => {
         as: 'game',
       },
     },
+    {
+      $unwind: {
+        path: '$game',
+      },
+    },
     ...paginate,
   ]);
 };
