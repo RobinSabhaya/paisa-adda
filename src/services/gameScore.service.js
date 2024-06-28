@@ -32,6 +32,14 @@ const getGameScoreList = async (options) => {
         deletedAt: null,
       },
     },
+    {
+      $lookup: {
+        from: 'games',
+        localField: 'game',
+        foreignField: '_id',
+        as: 'game',
+      },
+    },
     ...paginate,
   ]);
 };
