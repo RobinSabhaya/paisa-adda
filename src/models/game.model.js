@@ -6,6 +6,12 @@ const gameSchema = mongoose.Schema(
     game_name: {
       type: String,
     },
+    game_images: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
     game_description: {
       type: String,
     },

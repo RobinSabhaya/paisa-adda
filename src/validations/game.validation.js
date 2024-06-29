@@ -4,11 +4,12 @@ const { objectId } = require('./custom.validation');
 /** Create update game validation */
 const createUpdateGame = {
   body: Joi.object().keys({
-    game_name: Joi.string().required(),
-    game_description: Joi.string().required(),
-    game_price: Joi.number().required(),
-    game_max_score: Joi.number().required(),
-    game_min_score: Joi.number().required(),
+    game_name: Joi.string().optional(),
+    game_images: Joi.array().items(Joi.string().required()).optional(),
+    game_description: Joi.string().optional(),
+    game_price: Joi.number().optional(),
+    game_max_score: Joi.number().optional(),
+    game_min_score: Joi.number().optional(),
     game_id: Joi.string().custom(objectId).optional(),
   }),
 };

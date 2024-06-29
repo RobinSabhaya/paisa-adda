@@ -1,3 +1,4 @@
+const config = require('../config/config');
 const { paginationQuery } = require('../helper/mongoose.helper');
 const GameScore = require('../models/gameScore.model');
 
@@ -38,6 +39,26 @@ const getGameScoreList = async (options) => {
         localField: 'game',
         foreignField: '_id',
         as: 'game',
+        pipeline: [
+          {
+            $project: {
+              game_name: 1,
+              game_description: 1,
+              game_max_score: 1,
+              game_min_score: 1,
+              game_price: 1,
+              game_images: {
+                $map: {
+                  input: '$game_images',
+                  as: 'game_image',
+                  in: {
+                    $concat: [config.img_url, '$$game_image'],
+                  },
+                },
+              },
+            },
+          },
+        ],
       },
     },
     {

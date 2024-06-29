@@ -1,5 +1,6 @@
 const Game = require('../models/game.model');
 const { paginationQuery } = require('../helper/mongoose.helper');
+const config = require('../config/config');
 
 /**
  * Create a new game
@@ -40,6 +41,24 @@ const getGameList = async (options) => {
     {
       $match: {
         deletedAt: null,
+      },
+    },
+    {
+      $project: {
+        game_name: 1,
+        game_description: 1,
+        game_max_score: 1,
+        game_min_score: 1,
+        game_price: 1,
+        game_images: {
+          $map: {
+            input: '$game_images',
+            as: 'game_image',
+            in: {
+              $concat: [config.img_url, '$$game_image'],
+            },
+          },
+        },
       },
     },
     ...paginate,
