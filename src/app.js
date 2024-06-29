@@ -74,7 +74,7 @@ app.use(responseHandler);
 app.use('/v1', routes);
 
 // For static images
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/src/uploads', express.static(path.join(__dirname, '/uploads')));
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
