@@ -55,7 +55,23 @@ const getGameScoreList = catchAsync(async (req, res) => {
   });
 });
 
+/** Delete score */
+const deleteGameScore = catchAsync(async (req, res) => {
+  const { gameId } = req.params;
+  const gameScoreExists = await gameScoreService.getGameScore({ _id: gameId, deletedAt: null });
+  if (!gameScoreExists) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Game score not found');
+  }
+  const gameData = await gameScoreService.deleteScore({ _id: gameId });
+  res.status(httpStatus.OK).json({
+    success: true,
+    message: 'Game score deleted successfully',
+    data: gameData,
+  });
+});
+
 module.exports = {
   createUpdateGameScore,
   getGameScoreList,
+  deleteGameScore,
 };

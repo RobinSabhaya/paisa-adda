@@ -10,4 +10,11 @@ const createUpdateGameScore = {
   }),
 };
 
-module.exports = { createUpdateGameScore };
+/** Delete game score */
+const deleteGameScore = {
+  params: Joi.object().keys({
+    gameId: Joi.string().custom(objectId).required(),
+  }),
+};
+
+module.exports = { createUpdateGameScore, deleteGameScore };

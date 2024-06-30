@@ -70,8 +70,28 @@ const getGameScoreList = async (options) => {
   ]);
 };
 
+/**
+ * Get game score
+ * @param {object} filter
+ * @returns {Promise<GameScore>}
+ */
+const getGameScore = async (filter) => {
+  return GameScore.findOne(filter);
+};
+
+/**
+ * Delete score
+ * @param {object} filter
+ * @returns {Promise<GameScore>}
+ */
+const deleteScore = async (filter) => {
+  return GameScore.findOneAndUpdate(filter, { deletedAt: new Date() }, { new: true });
+};
+
 module.exports = {
   createGameScore,
   updateGameScore,
   getGameScoreList,
+  deleteScore,
+  getGameScore,
 };
